@@ -1,4 +1,5 @@
 import * as React from "react";
+import GtmNoscript from "./GtmNoscript";
 
 const CarIcon = () => (
   <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4" aria-hidden="true">
@@ -19,6 +20,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
 }) => {
   return (
     <div className="min-h-screen bg-background">
+      <GtmNoscript />
       <header className="fixed top-0 left-0 w-full z-50 bg-white/88 backdrop-blur-xl border-b border-black/8 shadow-sm">
         <div className="container mx-auto px-6 max-w-screen-xl">
           <nav className="flex justify-between items-center py-4">

@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import { AnalyticsProvider, AnalyticsScopeProvider } from "@yext/pages-components";
 import { TemplateProps } from "@yext/pages";
 import ChatWidget from "./chat/ChatWidget";
+import GtmNoscript from "./GtmNoscript";
 
 export interface PageLayoutProps {
   children?: React.ReactNode;
@@ -16,6 +17,7 @@ const PageLayout = ({ children, data, templateData }: PageLayoutProps) => {
 
   return (
     <AnalyticsProvider templateData={templateData}>
+      <GtmNoscript />
       <div className="min-h-screen">
         <Navigation
           data={{

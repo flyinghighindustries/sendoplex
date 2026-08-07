@@ -24,6 +24,7 @@ import Schema from "../components/Schema";
 import Services from "../components/Services";
 import What from "../components/What";
 import Why from "../components/Why";
+import { GTM_HEAD_SNIPPET } from "../utils/gtm";
 
 export const config: TemplateConfig = {
   stream: {
@@ -169,6 +170,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({ document }):
       },
     },
   ],
+  other: GTM_HEAD_SNIPPET,
 });
 
 const Location: Template<TemplateRenderProps> = ({ __meta, document }) => {

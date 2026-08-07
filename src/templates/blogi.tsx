@@ -11,6 +11,7 @@ import {
 import "../index.css";
 import { BLOG_ARTICLES } from "../data/blogArticles";
 import BlogLayout from "../components/BlogLayout";
+import { GTM_HEAD_SNIPPET } from "../utils/gtm";
 
 export const config: TemplateConfig = { name: "blogi" };
 
@@ -40,6 +41,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (): HeadConfig 
       attributes: { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
     },
   ],
+  other: GTM_HEAD_SNIPPET,
 });
 
 const THUMB_COLORS = ["bg-brand", "bg-brand-soft", "bg-brand-tint", "bg-primary/20"];

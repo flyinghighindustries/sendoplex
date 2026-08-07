@@ -11,6 +11,7 @@ import {
 import "../index.css";
 import { BLOG_ARTICLES } from "../data/blogArticles";
 import BlogArticlePage from "../components/BlogArticlePage";
+import { GTM_HEAD_SNIPPET } from "../utils/gtm";
 
 const article = BLOG_ARTICLES.find(a => a.slug === "kaivitusprobleem-talvel")!;
 
@@ -33,6 +34,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (): HeadConfig 
     },
     { type: "link", attributes: { rel: "icon", type: "image/x-icon", href: "/favicon.ico" } },
   ],
+  other: GTM_HEAD_SNIPPET,
 });
 
 const Page: Template<TemplateRenderProps> = () => <BlogArticlePage article={article} />;
